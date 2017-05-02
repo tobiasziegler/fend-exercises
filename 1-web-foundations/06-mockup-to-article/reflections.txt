@@ -6,4 +6,10 @@ You've learned a lot about web development so far. I want you to take a moment t
 
 ---
 
-Your response goes here!
+1. Because I have worked with HTML before this has mostly covered things I already knew how to do, but learning to use the Mozilla documentation to find the right markup has been a good skill to pick up.
+
+2. Most things have been pretty easy so far, but attention to detail has been the key.
+
+3. Avoiding making small errors (not closing tags properly, etc.), and making choices when multiple different elements could apply (e.g., in this project the strikethrough could have been an <s> element or <del>).
+
+4. I've made sure to start working at things and getting one part of each task to work, using trial and error and testing along the way.
