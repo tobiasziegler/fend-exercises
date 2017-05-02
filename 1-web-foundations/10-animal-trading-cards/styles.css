@@ -1,1 +1,38 @@
-/* add your CSS here */
+.animal-card {
+	border: solid 1px #ccc;
+	box-shadow: 6px 6px 3px 3px #ccc;
+	margin: 6px;
+	padding: 6px;
+	width: 300px;
+}
+
+.animal-name {
+	margin-bottom: 24px;
+}
+
+.animal-photo {
+	width: 300px;
+	margin-bottom: 16px;
+}
+
+.animal-facts {
+	border: solid 1px #ccc;
+	padding: 6px;
+}
+
+.interesting-fact {
+	font-style: italic;
+}
+
+.animal-item-list {
+	padding: 0;
+}
+
+.animal-item {
+	list-style-type: none;
+	padding: 0;
+}
+
+.item-label {
+	font-weight: bold;
+}
