@@ -79,10 +79,18 @@
 	text-transform: uppercase;
 }
 
+.page-title {
+	font-weight: 300;
+}
+
 .portfolio-item {
 	text-align: center;
 }
 
 .item-title {
 	text-transform: uppercase;
+}
+
+.item-link {
+	font-weight: 300;
 }
