@@ -9,6 +9,11 @@
 	box-sizing: border-box;
 }
 
+.title {
+	background-color: #33bebe;
+	color: #fff;
+}
+
 .app {
     display: -webkit-flex;
     display: flex;
@@ -20,4 +25,5 @@
 
 .description {
 	max-width: 705px;
+	margin-left: 30px;
 }
