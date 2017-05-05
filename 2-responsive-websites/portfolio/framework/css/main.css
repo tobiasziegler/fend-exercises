@@ -69,3 +69,16 @@
 .col-12 {
     width: 100%;
 }
+
+.header-text {
+	text-align: right;
+	text-transform: uppercase;
+}
+
+.portfolio-item {
+	text-align: center;
+}
+
+.item-title {
+	text-transform: uppercase;
+}
