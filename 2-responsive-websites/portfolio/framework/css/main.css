@@ -82,6 +82,13 @@
 
 .page-title {
 	font-weight: 300;
+	font-size: 3em;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.page-subtitle {
+	margin-top: 8px;
 }
 
 .feature-item-header {
