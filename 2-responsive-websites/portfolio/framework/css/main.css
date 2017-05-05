@@ -11,6 +11,7 @@
 
 * {
 	font-family: 'Lato', sans-serif;
+	color: #747704;
 }
 
 .grid {
@@ -81,6 +82,10 @@
 
 .page-title {
 	font-weight: 300;
+}
+
+.feature-item-header {
+	color: #bcbbbb;
 }
 
 .portfolio-item {
