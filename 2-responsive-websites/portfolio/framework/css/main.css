@@ -71,6 +71,10 @@
     width: 100%;
 }
 
+.page-header {
+	border-bottom: 4px solid #bcbbbb;
+}
+
 .header-text {
 	text-align: right;
 	text-transform: uppercase;
