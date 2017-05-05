@@ -69,9 +69,3 @@
 .col-12 {
     width: 100%;
 }
-
-@media only screen and (max-width: 500px) {
-	p {
-		display: none;
-	}
-}
