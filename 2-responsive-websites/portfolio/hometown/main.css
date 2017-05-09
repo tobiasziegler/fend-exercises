@@ -390,6 +390,18 @@ footer a {
     flex-wrap: wrap;
 }
 
+@media screen and (max-width: 550px) {
+    .header__logo {
+        height: 48px;
+        margin-right: 0.5em;
+    }
+    .header__title {
+        margin-left: 0;
+        font-size: 2em;
+        vertical-align: bottom;
+    }
+}
+
 @media screen and (min-width: 600px) {
     .snippet {
         width: 50%;
