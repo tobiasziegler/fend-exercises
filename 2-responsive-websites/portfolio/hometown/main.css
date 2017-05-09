@@ -384,9 +384,17 @@ footer a {
  *
  */
 
-.content {
+.content,
+.recent-news ul {
     display: flex;
     flex-wrap: wrap;
+}
+
+@media screen and (min-width: 600px) {
+    .snippet {
+        width: 50%;
+        margin: 1em 0;
+    }
 }
 
 @media screen and (min-width: 700px) {
