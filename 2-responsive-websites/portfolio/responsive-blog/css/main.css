@@ -12,6 +12,10 @@ I've left some boilerplate below for you.
 
 */
 
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
 body {
 	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
