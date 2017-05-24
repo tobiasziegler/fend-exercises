@@ -6,4 +6,4 @@
  */
 
 // this expression equals 4, change it to equal 42
-console.log(1 + 5 - 2);
+console.log((2 + 5 - 1) * 7);
