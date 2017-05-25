@@ -4,7 +4,7 @@
 
 var solution = 1;
 
-for(i = 12; i >= 1; i--) {
+for(var i = 12; i >= 1; i--) {
 	solution *= i;
 }
 
