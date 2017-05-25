@@ -10,4 +10,8 @@
  *  - the highest seat number is 99, not 100
  */
 
-// Write your code here
+for (var x = 0; x < 26; x++) {
+	for (var y = 0; y < 100; y++) {
+		console.log(x + '-' + y);
+	}
+}
