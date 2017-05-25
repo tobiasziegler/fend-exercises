@@ -15,4 +15,4 @@ var doctor = "Simon";
 var sister = "River";
 var shepherd = "Book";
 
-// your code goes here
+crew.push(doctor, sister, shepherd);
