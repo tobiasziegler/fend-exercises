@@ -2,4 +2,4 @@
  * Programming Quiz: Favorite Food (2-3)
  */
 
-console.log("Schnitty");
+console.log('Schnitty');
