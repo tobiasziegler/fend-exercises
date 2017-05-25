@@ -11,9 +11,17 @@
 
 var num = 99;
 
-while (/* your stop condition goes here */) {
-    // check value of num
-    // print lyrics using num
-    // don't forget to check pluralization on the last line!
-    // decrement num
+while (num > 0) {
+    var bottle1 = num + ' bottles';
+	var bottle2 = (num - 1) + ' bottles';
+
+	if (num === 2) {
+		bottle2 = (num - 1) + ' bottle';
+	} else if (num === 1) {
+		bottle1 = num + ' bottle';
+	}
+
+	console.log(bottle1 + ' of juice on the wall! ' + bottle1 + ' of juice! Take one down, pass it around... ' + bottle2 + ' of juice on the wall!');
+
+    num = num - 1;
 }
