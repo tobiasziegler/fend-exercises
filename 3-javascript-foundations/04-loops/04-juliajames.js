@@ -4,8 +4,9 @@
 
 var x = 1;
 
-while (/* your stop condition goes here */) {
-    // check divisibility
-    // print Julia, James, or JuliaJames
-    // increment x
+while (x <= 20) {
+	var output = '';
+	x % 3 === 0 ? x % 5 === 0 ? output = 'JuliaJames' : output = 'Julia' : x % 5 === 0 ?  output = 'James' : output = x;
+	console.log(output);
+    x = x + 1;
 }
