@@ -20,4 +20,12 @@ var numbers = [
     [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
 ];
 
-// your code goes here
+for (r = 0; r < numbers.length; r++) {
+	for(c = 0; c < numbers[r].length; c++) {
+		if (numbers[r][c] % 2 === 0) {
+			numbers[r][c] = 'even';
+		} else {
+			numbers[r][c] = 'odd';
+		}
+	}
+}
