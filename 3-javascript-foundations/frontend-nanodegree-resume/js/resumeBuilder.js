@@ -253,3 +253,5 @@ function displayWork() {
 		$(".work-entry:last").append(HTMLworkDescription.replace("%data%", work.jobs[job].description));
 	}
 }
+
+displayWork();
