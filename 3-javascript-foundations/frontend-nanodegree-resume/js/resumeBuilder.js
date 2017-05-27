@@ -180,19 +180,22 @@ var work = {
 			"title": "Policy and Legislation Advisor",
 			"employer": "Jan Barham MLC, Parliament of NSW",
 			"years": "2012-2017",
-			"location": "Sydney, NSW, Australia"
+			"location": "Sydney, NSW, Australia",
+			"description": "Quisque consequat semper risus, et pharetra orci ullamcorper eu. Aliquam pretium libero ac velit tempus, ac vestibulum purus accumsan. Quisque imperdiet arcu elit, nec ullamcorper risus efficitur sed. Donec venenatis consectetur dolor, vitae molestie libero blandit sit amet. Cras ultrices finibus congue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec bibendum mi eros, vitae lacinia lectus ornare at. In ut ipsum semper, efficitur risus ultricies, luctus erat. Donec consequat sodales metus, non cursus sapien lacinia vel. Ut pellentesque augue metus, quis pharetra odio pulvinar ut. Cras rutrum mi sed nibh facilisis, vel vulputate erat semper. Sed eu maximus urna, eget sagittis quam."
 		},
 		{
 			"title": "Senior Lecturer in Psychology",
 			"employer": "Charles Sturt University",
 			"years": "2006-2012",
-			"location": "Bathurst, NSW, Australia"
+			"location": "Bathurst, NSW, Australia",
+			"description": "Quisque consequat semper risus, et pharetra orci ullamcorper eu. Aliquam pretium libero ac velit tempus, ac vestibulum purus accumsan. Quisque imperdiet arcu elit, nec ullamcorper risus efficitur sed. Donec venenatis consectetur dolor, vitae molestie libero blandit sit amet. Cras ultrices finibus congue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec bibendum mi eros, vitae lacinia lectus ornare at. In ut ipsum semper, efficitur risus ultricies, luctus erat. Donec consequat sodales metus, non cursus sapien lacinia vel. Ut pellentesque augue metus, quis pharetra odio pulvinar ut. Cras rutrum mi sed nibh facilisis, vel vulputate erat semper. Sed eu maximus urna, eget sagittis quam."
 		},
 		{
 			"title": "Lecturer in Psychology",
 			"employer": "Charles Sturt University",
 			"years": "2002-2005",
-			"location": "Bathurst, NSW, Australia"
+			"location": "Bathurst, NSW, Australia",
+			"description": "Quisque consequat semper risus, et pharetra orci ullamcorper eu. Aliquam pretium libero ac velit tempus, ac vestibulum purus accumsan. Quisque imperdiet arcu elit, nec ullamcorper risus efficitur sed. Donec venenatis consectetur dolor, vitae molestie libero blandit sit amet. Cras ultrices finibus congue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec bibendum mi eros, vitae lacinia lectus ornare at. In ut ipsum semper, efficitur risus ultricies, luctus erat. Donec consequat sodales metus, non cursus sapien lacinia vel. Ut pellentesque augue metus, quis pharetra odio pulvinar ut. Cras rutrum mi sed nibh facilisis, vel vulputate erat semper. Sed eu maximus urna, eget sagittis quam."
 		}
 	]
 };
@@ -233,4 +236,7 @@ for (job in work.jobs) {
 	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 	$(".work-entry:last").append(formattedEmployer + formattedTitle);
+	$(".work-entry:last").append(HTMLworkDates.replace("%data%", work.jobs[job].years));
+	$(".work-entry:last").append(HTMLworkLocation.replace("%data%", work.jobs[job].location));
+	$(".work-entry:last").append(HTMLworkDescription.replace("%data%", work.jobs[job].description));
 }
