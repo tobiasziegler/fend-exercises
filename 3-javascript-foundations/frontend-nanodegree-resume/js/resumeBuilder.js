@@ -69,24 +69,56 @@ $("#skills").append(formattedSkills1);
 $("#skills").append(formattedSkills2);
 
 // Practice with Objects
-var work = {};
-work.position = "Policy and Legislation Advisor";
-work.employer = "Jan Barham MLC, Parliament of NSW";
-work.years = "2012-2017";
-work.city = "Sydney";
+// var work = {};
+// work.position = "Policy and Legislation Advisor";
+// work.employer = "Jan Barham MLC, Parliament of NSW";
+// work.years = "2012-2017";
+// work.city = "Sydney";
+//
+// var education = {};
+// education["school"] = "University of New England";
+// education["degree"] = "Graduate Diploma of Legal Studies";
+// education["years"] = "2007-2009";
+// education["city"] = "Distance Education";
+//
+// $("#workExperience").append(HTMLworkStart);
+// $(".work-entry").append(HTMLworkEmployer.replace("%data%", work["employer"]) + HTMLworkTitle.replace("%data%", work["position"]));
+// $(".work-entry").append(HTMLworkDates.replace("%data%", work["years"]));
+// $(".work-entry").append(HTMLworkLocation.replace("%data%", work["city"]));
+//
+// $("#education").append(HTMLschoolStart);
+// $(".education-entry").append(HTMLschoolName.replace("%data%", education.school) + HTMLschoolDegree.replace("%data%", education.degree));
+// $(".education-entry").append(HTMLschoolDates.replace("%data%", education.years));
+// $(".education-entry").append(HTMLschoolLocation.replace("%data%", education.city));
 
-var education = {};
-education["school"] = "University of New England";
-education["degree"] = "Graduate Diploma of Legal Studies";
-education["years"] = "2007-2009";
-education["city"] = "Distance Education";
-
-$("#workExperience").append(HTMLworkStart);
-$(".work-entry").append(HTMLworkEmployer.replace("%data%", work["employer"]) + HTMLworkTitle.replace("%data%", work["position"]));
-$(".work-entry").append(HTMLworkDates.replace("%data%", work["years"]));
-$(".work-entry").append(HTMLworkLocation.replace("%data%", work["city"]));
-
-$("#education").append(HTMLschoolStart);
-$(".education-entry").append(HTMLschoolName.replace("%data%", education.school) + HTMLschoolDegree.replace("%data%", education.degree));
-$(".education-entry").append(HTMLschoolDates.replace("%data%", education.years));
-$(".education-entry").append(HTMLschoolLocation.replace("%data%", education.city));
+// Validating JSON
+var education = {
+	"schools": [
+		{
+			"name": "University of New England",
+			"location": "Distance Education",
+			"degree": "Graduate Diploma of Legal Studies",
+			"dates": "2007-2009"
+		},
+		{
+			"name": "University of New South Wales",
+			"location": "Sydney, NSW, Australia",
+			"degree": "Doctor of Philosophy",
+			"dates": "1998-2002"
+		},
+		{
+			"name": "University of New South Wales",
+			"location": "Sydney, NSW, Australia",
+			"degree": "Bachelor of Science (Psychology) (Honours)",
+			"dates": "1993-1996"
+		}
+	],
+	"onlineCourses": [
+		{
+			"title": "Front-End Web Developer Nanodegree",
+			"school": "Udacity",
+			"dates": 2017,
+			"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+		}
+	]
+};
