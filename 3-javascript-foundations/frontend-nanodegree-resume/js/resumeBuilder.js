@@ -204,15 +204,27 @@ var projects = {
 	"projects": [
 		{
 			"title": "Fund Our Libraries",
-			"dates": "2013-2014"
+			"dates": "2013-2014",
+			"description": "I implemented a WordPress child-parent theme combination, established the information architecture, and produced content and functionality to meet the campaign objectives.",
+			"images": [
+				"images/fund-our-libraries-1x.jpg"
+			]
 		},
 		{
 			"title": "Climate Action NSW",
-			"dates": "2015-2016"
+			"dates": "2015-2016",
+			"description": "I developed a WordPress child theme, established the information architecture, and produced content and functionality to meet campaign objectives.",
+			"images": [
+				"images/climate-action-nsw-1x.jpg"
+			]
 		},
 		{
 			"title": "Saving Our Forests",
-			"dates": "2016-2017"
+			"dates": "2016-2017",
+			"description": "I developed a WordPress child theme, established the information architecture, and produced content.",
+			"images": [
+				"images/saving-our-forests-1x.jpg"
+			]
 		}
 	]
 };
@@ -275,3 +287,18 @@ function inName(oldName) {
 }
 
 $("#main").append(internationalizeButton);
+
+// Encapsulating Functions
+projects.display = function() {
+	projects.projects.forEach(function(project) {
+		$("#projects").append(HTMLprojectStart);
+		$(".project-entry:last").append(HTMLprojectTitle.replace("%data%", project.title));
+		$(".project-entry:last").append(HTMLprojectDates.replace("%data%", project.dates));
+		$(".project-entry:last").append(HTMLprojectDescription.replace("%data%", project.description));
+		project.images.forEach(function(image) {
+			$(".project-entry:last").append(HTMLprojectImage.replace("%data%", image));
+		});
+	});
+};
+
+projects.display();
