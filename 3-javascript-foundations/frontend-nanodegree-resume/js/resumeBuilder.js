@@ -18,55 +18,55 @@
 // $("#header").prepend(formattedName);
 
 // Biography Quiz
-var bio = {
-	name: "David Mallard",
-	role: "Front-End Web Developer",
-	contacts: {
-		"mobile": "0432-881-448",
-		"email": "correspondence@davidmallard.id.au",
-		"github": "tobiasziegler",
-		"twitter": "@tobiasziegler",
-		"location": "Orange, NSW, Australia"
-	},
-	welcomeMsg: "G\'day, people",
-	bioPic: "images/tobby.png",
-	skills: [
-		"web development",
-		"user experience design",
-		"content strategy"
-	]
-};
-
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-var formattedSkills0 = HTMLskills.replace("%data%", bio.skills[0]);
-var formattedSkills1 = HTMLskills.replace("%data%", bio.skills[1]);
-var formattedSkills2 = HTMLskills.replace("%data%", bio.skills[2]);
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#topContacts").append(formattedMobile);
-$("#topContacts").append(formattedEmail);
-$("#topContacts").append(formattedGithub);
-$("#topContacts").append(formattedTwitter);
-$("#topContacts").append(formattedLocation);
-$("#footerContacts").append(formattedMobile);
-$("#footerContacts").append(formattedEmail);
-$("#footerContacts").append(formattedGithub);
-$("#footerContacts").append(formattedTwitter);
-$("#footerContacts").append(formattedLocation);
-$("#header").append(formattedBioPic);
-$("#header").append(formattedWelcomeMsg);
-$("#header").append(HTMLskillsStart);
-$("#skills").append(formattedSkills0);
-$("#skills").append(formattedSkills1);
-$("#skills").append(formattedSkills2);
+// var bio = {
+	// name: "David Mallard",
+	// role: "Front-End Web Developer",
+	// contacts: {
+		// "mobile": "0432-881-448",
+		// "email": "correspondence@davidmallard.id.au",
+		// "github": "tobiasziegler",
+		// "twitter": "@tobiasziegler",
+		// "location": "Orange, NSW, Australia"
+	// },
+	// welcomeMsg: "G\'day, people",
+	// bioPic: "images/tobby.png",
+	// skills: [
+		// "web development",
+		// "user experience design",
+		// "content strategy"
+	// ]
+// };
+//
+// var formattedName = HTMLheaderName.replace("%data%", bio.name);
+// var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+// var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+// var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+// var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+// var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+// var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+// var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+// var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+// var formattedSkills0 = HTMLskills.replace("%data%", bio.skills[0]);
+// var formattedSkills1 = HTMLskills.replace("%data%", bio.skills[1]);
+// var formattedSkills2 = HTMLskills.replace("%data%", bio.skills[2]);
+// $("#header").prepend(formattedRole);
+// $("#header").prepend(formattedName);
+// $("#topContacts").append(formattedMobile);
+// $("#topContacts").append(formattedEmail);
+// $("#topContacts").append(formattedGithub);
+// $("#topContacts").append(formattedTwitter);
+// $("#topContacts").append(formattedLocation);
+// $("#footerContacts").append(formattedMobile);
+// $("#footerContacts").append(formattedEmail);
+// $("#footerContacts").append(formattedGithub);
+// $("#footerContacts").append(formattedTwitter);
+// $("#footerContacts").append(formattedLocation);
+// $("#header").append(formattedBioPic);
+// $("#header").append(formattedWelcomeMsg);
+// $("#header").append(HTMLskillsStart);
+// $("#skills").append(formattedSkills0);
+// $("#skills").append(formattedSkills1);
+// $("#skills").append(formattedSkills2);
 
 // Practice with Objects
 // var work = {};
@@ -92,6 +92,57 @@ $("#skills").append(formattedSkills2);
 // $(".education-entry").append(HTMLschoolLocation.replace("%data%", education.city));
 
 // Validating JSON
+// var education = {
+	// "schools": [
+		// {
+			// "name": "University of New England",
+			// "location": "Distance Education",
+			// "degree": "Graduate Diploma of Legal Studies",
+			// "dates": "2007-2009"
+		// },
+		// {
+			// "name": "University of New South Wales",
+			// "location": "Sydney, NSW, Australia",
+			// "degree": "Doctor of Philosophy",
+			// "dates": "1998-2002"
+		// },
+		// {
+			// "name": "University of New South Wales",
+			// "location": "Sydney, NSW, Australia",
+			// "degree": "Bachelor of Science (Psychology) (Honours)",
+			// "dates": "1993-1996"
+		// }
+	// ],
+	// "onlineCourses": [
+		// {
+			// "title": "Front-End Web Developer Nanodegree",
+			// "school": "Udacity",
+			// "dates": 2017,
+			// "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+		// }
+	// ]
+// };
+
+// All the Resume Sections
+var bio = {
+	name: "David Mallard",
+	role: "Front-End Web Developer",
+	contacts: {
+		"mobile": "0432-881-448",
+		"email": "correspondence@davidmallard.id.au",
+		"github": "tobiasziegler",
+		"twitter": "@tobiasziegler",
+		"location": "Orange, NSW, Australia"
+	},
+	welcomeMsg: "G\'day, people",
+	bioPic: "images/tobby.png",
+	skills: [
+		"web development",
+		"user experience design",
+		"content strategy"
+	]
+};
+
 var education = {
 	"schools": [
 		{
@@ -117,8 +168,48 @@ var education = {
 		{
 			"title": "Front-End Web Developer Nanodegree",
 			"school": "Udacity",
-			"dates": 2017,
+			"dates": "2017",
 			"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+		}
+	]
+};
+
+var work = {
+	"jobs": [
+		{
+			"position": "Policy and Legislation Advisor",
+			"employer": "Jan Barham MLC, Parliament of NSW",
+			"years": "2012-2017",
+			"location": "Sydney, NSW, Australia"
+		},
+		{
+			"position": "Senior Lecturer in Psychology",
+			"employer": "Charles Sturt University",
+			"years": "2006-2012",
+			"location": "Bathurst, NSW, Australia"
+		},
+		{
+			"position": "Lecturer in Psychology",
+			"employer": "Charles Sturt University",
+			"years": "2002-2005",
+			"location": "Bathurst, NSW, Australia"
+		}
+	]
+};
+
+var projects = {
+	"projects": [
+		{
+			"title": "Fund Our Libraries",
+			"dates": "2013-2014"
+		},
+		{
+			"title": "Climate Action NSW",
+			"dates": "2015-2016"
+		},
+		{
+			"title": "Saving Our Forests",
+			"dates": "2016-2017"
 		}
 	]
 };
