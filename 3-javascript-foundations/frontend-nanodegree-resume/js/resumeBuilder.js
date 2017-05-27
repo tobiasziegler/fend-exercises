@@ -213,3 +213,16 @@ var projects = {
 		}
 	]
 };
+
+// If Statements
+// Note that the header doesn't display at all unless the name has been displayed
+$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
+
+if (bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+
+	$("#skills").append(HTMLskills.replace("%data%", bio.skills[0]));
+	$("#skills").append(HTMLskills.replace("%data%", bio.skills[1]));
+	$("#skills").append(HTMLskills.replace("%data%", bio.skills[2]));
+}
