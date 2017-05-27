@@ -255,3 +255,9 @@ function displayWork() {
 }
 
 displayWork();
+
+// Collecting Click Locations
+
+$(document).click(function(loc) {
+	logClicks(loc.pageX, loc.pageY);
+});
