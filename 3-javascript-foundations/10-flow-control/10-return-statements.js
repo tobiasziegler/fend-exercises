@@ -34,7 +34,13 @@ var work = {
 // Your code goes here! Let me help you get started
 
 function locationizer(work_obj) {
+	var workArray = [];
 
+	work_obj.jobs.forEach(function(job) {
+		workArray.push(job.location);
+	});
+
+	return workArray;
 }
 
 // Did locationizer() work? This line will tell you!
