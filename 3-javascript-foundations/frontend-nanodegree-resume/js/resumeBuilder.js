@@ -177,19 +177,19 @@ var education = {
 var work = {
 	"jobs": [
 		{
-			"position": "Policy and Legislation Advisor",
+			"title": "Policy and Legislation Advisor",
 			"employer": "Jan Barham MLC, Parliament of NSW",
 			"years": "2012-2017",
 			"location": "Sydney, NSW, Australia"
 		},
 		{
-			"position": "Senior Lecturer in Psychology",
+			"title": "Senior Lecturer in Psychology",
 			"employer": "Charles Sturt University",
 			"years": "2006-2012",
 			"location": "Bathurst, NSW, Australia"
 		},
 		{
-			"position": "Lecturer in Psychology",
+			"title": "Lecturer in Psychology",
 			"employer": "Charles Sturt University",
 			"years": "2002-2005",
 			"location": "Bathurst, NSW, Australia"
@@ -225,4 +225,12 @@ if (bio.skills.length > 0) {
 	$("#skills").append(HTMLskills.replace("%data%", bio.skills[0]));
 	$("#skills").append(HTMLskills.replace("%data%", bio.skills[1]));
 	$("#skills").append(HTMLskills.replace("%data%", bio.skills[2]));
+}
+
+// For-In Loops
+for (job in work.jobs) {
+	$("#workExperience").append(HTMLworkStart);
+	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+	var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+	$(".work-entry:last").append(formattedEmployer + formattedTitle);
 }
