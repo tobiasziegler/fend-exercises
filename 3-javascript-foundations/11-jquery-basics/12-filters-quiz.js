@@ -10,8 +10,11 @@ var articleList, h1, kids, parents;
 
 articleList = $('.article-list');
 
-h1 = // Your code goes here!
-
-kids = // Your code goes here!
-
-parents = // Your code goes here!
+h1 = articleList.siblings('h1');
+console.log(h1);
+// Note that the question asked for "all of the children" so I used this, but
+// the solution used .find(*) to select all descendants below the children too.
+kids = articleList.children();
+console.log(kids);
+parents = articleList.parents('div');
+console.log(parents);
