@@ -6,3 +6,8 @@ For this quiz, use jQuery to set up an event listener. Your event listener must:
         a. remove the #my-button element from the DOM
         b. add the `success` class to the body
 */
+
+$('#my-button').on('click', function() {
+	$('#my-button').remove();
+	$('body').addClass('success');
+})
