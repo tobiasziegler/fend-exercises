@@ -7,4 +7,7 @@ You must use jQuery's attr() method!
 // Start with this variable!
 var navList;
 
-navList = // your code goes here!
+navList = $('.nav-list');
+navItem1 = navList.children().first();
+anchor1 = navItem1.find('a');
+anchor1.attr('href', '#1');
