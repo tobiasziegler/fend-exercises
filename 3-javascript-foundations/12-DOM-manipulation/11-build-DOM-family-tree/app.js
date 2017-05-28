@@ -5,4 +5,7 @@ For this quiz, you'll need to add to the DOM tree that already exists.
 of '#family2'. '#bruce' should have two <div>s as children, '#madison' and '#hunter'.
 */
 
-// Your code goes here!
+$('<div id="family2"><h1>Family2</h1></div>').insertAfter('#family1');
+$('#family2').append('<div id="bruce"><h2>Bruce</h2></div>');
+$('#bruce').append('<div id="madison"><h3>Madison</h3></div>');
+$('#bruce').append('<div id="hunter"><h3>Hunter</h3></div>');
