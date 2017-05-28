@@ -6,4 +6,9 @@ Also, make sure you don't change the text inside each <p> except to add the leng
 length numbers won't be correct!
 */
 
-// Your code goes here!
+$('p').each(function() {
+	var origText = $(this).text();
+	var len = origText.length;
+	var newText = origText + ' ' + len;
+	$(this).text(newText);
+});
