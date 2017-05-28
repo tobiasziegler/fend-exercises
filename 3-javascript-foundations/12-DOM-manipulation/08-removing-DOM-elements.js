@@ -7,4 +7,7 @@ You must use jQuery's remove() method.
 // Start with this variable!
 var articleItems;
 
-articleItems = // your code goes here!
+articleItems = $('.article-item');
+firstArticle = articleItems.first();
+ul = firstArticle.find('ul');
+ul.remove();
