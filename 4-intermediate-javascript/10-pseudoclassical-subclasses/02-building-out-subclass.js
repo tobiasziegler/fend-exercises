@@ -6,8 +6,10 @@ Car.prototype.move = function(){
 };
 
 var Van = function(loc){
-
+	Car.call(this, loc);
 }
+Van.prototype = Object.create(Car.prototype);
+Van.prototype.constructor = Van;
 
 var zed = new Car(3);
 zed.move();
