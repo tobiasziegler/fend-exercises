@@ -2,7 +2,9 @@ var Car = function(loc){
     this.loc = loc;
 };
 
-// Your code goes here!
+Car.prototype.move = function () {
+	this.loc++;
+};
 
 var zed = new Car(3);
 zed.move();
