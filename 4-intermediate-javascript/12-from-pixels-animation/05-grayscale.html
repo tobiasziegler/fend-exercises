@@ -1,0 +1,58 @@
+<!doctype HTML>
+
+<html>
+<head>
+</head>
+<body>
+	<canvas id="c" width="400" height="400"></canvas>
+	<script>
+		var c = document.querySelector("#c");
+		var ctx = c.getContext("2d");
+
+		var data = ctx.getImageData(0, 0, 400, 400);
+
+		function paintGreen (imageData) {
+			var pixels = imageData.data.length / 4;
+
+			// Loop through each pixel
+			for (var i = 0; i < pixels; i++) {
+				// Check whether it's the 10th pixel
+				if ((i + 1) % 10 === 0) {
+					imageData.data[(i * 4) + 1] = 255; // green
+					imageData.data[(i * 4) + 3] = 255; // alpha
+				}
+			}
+
+			return imageData;
+		}
+
+		function makeGrayscale(imageData) {
+			// There are four items in the array per pixel - r, g, b, a
+			var pixels = data.data.length / 4;
+
+			// Loop through each pixel
+			for (var i = 0; i < pixels; i++) {
+				// Using the simple averaging algorithm from:
+				// http://www.tannerhelland.com/3643/grayscale-image-algorithm-vb6/
+				r = imageData.data[(i * 4)];
+				g = imageData.data[(i * 4) + 1];
+				b = imageData.data[(i * 4) + 2];
+
+				avg = (r + g + b) / 3;
+
+				imageData.data[(i * 4)] = avg;
+				imageData.data[(i * 4) + 1] = avg;
+				imageData.data[(i * 4) + 2] = avg;
+			}
+
+			return imageData;
+		}
+
+		// First draw the green stripes, then convert to grayscale and display
+		data = paintGreen(data);
+		data = makeGrayscale(data);
+		ctx.putImageData(data, 0, 0);
+
+	</script>
+</body>
+</html>
