@@ -1,21 +1,19 @@
-<h1>My Fabulous Recipe</h1>
+# My fabulous recipe
 
-<p>This recipe for <strong>cereal and milk</strong> has been passed down my family for months.</p>
+This recipe for **cereal and milk** has been passed down my family for months.
 
-<h2>Ingredients</h2>
+## Ingredients
 
-<ul>
-	<li>Cereal (you can find cool cereals <a href="www.example.com/coolcereals">here</a>)</li>
-	<li>Milk</li>
-</ul>
+- Cereal (you can find cool cereals [here](www.example.com/coolcereals))
+- Mik
 
-<h2>Directions</h2>
+## Directions
 
-<p>If I were writing these out as <em>code</em>, it might look something like this:</p>
+If I were writing these out as _code_, it might look something like this:
 
-<pre><code>if bowl is empty:
-	add cereal
+```
+if bowl is empty:
+	ad cereal
 if bowl only has cereal in it:
 	add milk
-</code></pre>
-</body>
+```
