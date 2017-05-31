@@ -5,12 +5,10 @@
 
 var carlike = function(obj, loc) {
     obj.loc = loc;
-    obj.move = move;
+    obj.move = function() {
+		this.loc++;
+	};
     return obj;
-};
-
-var move = function() {
-    this.loc++;
 };
 
 var amy = carlike({}, 1);
