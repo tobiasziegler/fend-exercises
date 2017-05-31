@@ -3,11 +3,12 @@
 // syntax with "dot access" as we do below.
 var carlike = function(obj, loc) {
     obj.loc = loc;
+	obj.move = move;
     return obj;
 };
 
-var move = function(car) {
-    car.loc++;
+var move = function() {
+    this.loc++;
 };
 
 /////
