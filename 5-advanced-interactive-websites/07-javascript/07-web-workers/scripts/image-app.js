@@ -52,9 +52,18 @@
 
     w.onmessage = function(e) {
         toggleButtonsAbledness();
-        imageData = e.data;
-        return ctx.putImageData(imageData, 0, 0);
-    }
+        image = e.data;
+        if (image) return ctx.putImageData(image, 0, 0);
+        console.log('No manipulated image returned');
+    };
+
+    w.onerror = function(error) {
+        function workerException(message) {
+            this.name = 'WorkerException';
+            this.message = message;
+        };
+        throw new WorkerException('Worker error');
+    };
   };
 
   function revertImage() {
