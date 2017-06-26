@@ -24,7 +24,7 @@
       will-change: transform;
     }
 
-    body.toggled main .box-container .box:nth-child(2n) {
+    .box--toggled {
       background: #777 !important;
     }
 
@@ -66,7 +66,13 @@
     }
 
     button.addEventListener('click', function() {
-      document.body.classList.toggle('toggled');
+      var boxes = document.querySelectorAll('.box');
+
+      for (var j = 0; j < boxes.length; j++) {
+          if ((j + 1) % 2 === 0) {
+              boxes[j].classList.toggle('box--toggled');
+          }
+      }
     });
 
     </script>
