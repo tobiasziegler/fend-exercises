@@ -67,6 +67,15 @@
         }
         callback(url);
       };
+
+      qrWorker.onerror = function(error) {
+        function workerException(message) {
+            this.name = 'WorkerException';
+            this.message = message;
+        };
+        throw new workerException('Decoder error');
+        callback(undefined);
+      };
     };
 
     this.showDialog = function(url) {
