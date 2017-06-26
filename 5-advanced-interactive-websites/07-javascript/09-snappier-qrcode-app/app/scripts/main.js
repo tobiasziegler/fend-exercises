@@ -48,6 +48,8 @@
 
     var client = new QRClient();
 
+    var qrWorker = new Worker('scripts/jsqrcode/qrworker.js');
+
     var self = this;
 
     this.currentUrl = undefined;
@@ -56,12 +58,15 @@
     this.detectQRCode = function(imageData, callback) {
       callback = callback || function() {};
 
-      client.decode(imageData, function(result) {
-        if(result !== undefined) {
-          self.currentUrl = result;
+      qrWorker.postMessage(imageData);
+
+      qrWorker.onmessage = function(result) {
+        var url = result.data;
+        if(url !== undefined) {
+          self.currentUrl = url;
         }
-        callback(result);
-      });
+        callback(url);
+      };
     };
 
     this.showDialog = function(url) {
