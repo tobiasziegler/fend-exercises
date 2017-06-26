@@ -66,12 +66,13 @@
     }
 
     button.addEventListener('click', function() {
+      document.body.classList.toggle('toggled');
+
       var boxes = document.querySelectorAll('.box');
 
-      for (var j = 0; j < boxes.length; j++) {
-          if ((j + 1) % 2 === 0) {
-              boxes[j].classList.toggle('box--toggled');
-          }
+      for (var j = 1; j < boxes.length; j += 2) {
+          boxes[j].classList.toggle('box--toggled',
+            document.body.classList.contains('toggled'));
       }
     });
 
