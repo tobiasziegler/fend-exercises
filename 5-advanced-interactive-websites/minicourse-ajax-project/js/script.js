@@ -49,6 +49,10 @@ function loadData() {
     var wikipediaUrl = 'https://en.wikipedia.org/w/api.php?format=json' +
         '&action=query&list=search&srsearch=' + city;
 
+    var wikiRequestTimeout = setTimeout(function() {
+        $wikiElem.text('Failed to get Wikipedia resources');
+    }, 8000);
+
     $.ajax(
         wikipediaUrl,
         {
@@ -60,6 +64,8 @@ function loadData() {
 
                     $('#wikipedia-links').append(article);
                 });
+
+                clearTimeout(wikiRequestTimeout);
             }
         }
     );
