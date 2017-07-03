@@ -40,6 +40,9 @@ function loadData() {
                 '<p>' + doc.snippet + '</p></li>';
             $('#nytimes-articles').append(article);
         });
+    })
+    .error(function() {
+        $nytHeaderElem.text('New York Times Articles Could Not Be Loaded');
     });
 
     return false;
