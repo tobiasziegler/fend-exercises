@@ -1,0 +1,16 @@
+.grid {
+	display: flex;
+	justify-content: space-between;
+}
+
+#cat-picker {
+	flex: 0 0 25%;
+}
+
+#cat-clicker {
+	flex: 1;
+}
+
+img {
+	max-width: 100%;
+}
