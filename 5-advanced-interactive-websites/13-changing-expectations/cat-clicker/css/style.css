@@ -1,8 +1,13 @@
-#cat-clicker-duo {
+.grid {
 	display: flex;
+	justify-content: space-between;
 }
 
-.cat-clicker {
+#cat-picker {
+	flex: 0 0 25%;
+}
+
+#cat-clicker {
 	flex: 1;
 }
 
