@@ -3,19 +3,41 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Cat Clicker Premium!</title>
+	<title>Cat Clicker Premium Pro!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>Welcome to Cat Clicker Premium</h1>
+	<h1>Welcome to Cat Clicker Premium Pro</h1>
 
 	<div class="grid">
-		<section id="cat-picker">
-			<h2>Select a cat</h2>
-			<ul id="cat-list"></ul>
-		</section>
+		<div id="sidebar">
+			<section id="cat-picker">
+				<h2>Select a cat</h2>
+				<ul id="cat-list"></ul>
+				<button id="admin-button">Admin</button>
+			</section>
+			<section id="admin">
+				<h2>Edit Cat Details</h2>
+				<form id="admin-form">
+					<div>
+						<label for="admin-cat-name">Cat Name</label>
+						<input type="text" name="name" id="admin-cat-name">
+					</div>
+					<div>
+						<label for="admin-cat-img">Image URL</label>
+						<input type="text" name="img" id="admin-cat-img">
+					</div>
+					<div>
+						<label for="admin-cat-clicks">No. of Clicks</label>
+						<input type="number" name="clicks" id="admin-cat-clicks">
+					</div>
+					<button id="admin-save">Save</button>
+					<button id="admin-cancel">Cancel</button>
+				</form>
+			</section>
+		</div>
 		<section id="cat-clicker">
 			<h2 id="cat-name"></h2>
 			<img src="" id="cat-img">
