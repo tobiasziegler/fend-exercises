@@ -45,8 +45,15 @@ $(document).ready(function(e) {
 			$('#cat-clicker').append(
 				'<h2>' + cat.name + '</h2>' +
 				'<img src="' + cat.img + '" alt="' + cat.name + '" id="cat">' +
-				'<p>Number of clicks: ' + cat.clicks + '</p>'
+				'<p id="cat-clicks">Number of clicks: ' + cat.clicks + '</p>'
 			);
+
+			// Set the click event handler for the cat in the clicker section
+			$('#cat').click(function(e) {
+				// Update the counter and display the new count
+				cat.clicks++;
+				$('#cat-clicks').text('Number of clicks: ' + cat.clicks);
+			})
 		}));
 	}
 });
