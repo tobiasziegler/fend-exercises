@@ -1,0 +1,11 @@
+#cat-clicker-duo {
+	display: flex;
+}
+
+.cat-clicker {
+	flex: 1;
+}
+
+img {
+	max-width: 100%;
+}
