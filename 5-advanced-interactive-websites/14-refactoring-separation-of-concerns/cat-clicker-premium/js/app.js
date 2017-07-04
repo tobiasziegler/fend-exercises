@@ -33,6 +33,7 @@ $(function(){
 	var octopus = {
 		init: function() {
 			catListView.init();
+			catClickView.init();
 		},
 		getCats: function() {
 			return model.cats;
@@ -51,7 +52,15 @@ $(function(){
 
 	var catListView = {
 		init: function() {
+			// Store the DOM element for later use and then render the items
+			this.catList = $('#cat-list');
+			this.render();
+		},
+		render: function() {
 			var cats = octopus.getCats();
+
+			// Clear any existing content or event handlers
+			this.catList.empty();
 
 			cats.forEach(function(cat) {
 				// Create a list item for each cat
@@ -60,35 +69,43 @@ $(function(){
 				li.innerHTML = '<li class="cat-list-item">' + cat.name + '</li>';
 
 				// Add the item into the DOM
-				$('#cat-list').append(li);
+				this.catList.append(li);
 
 				// Set up the click event handler
 				$(li).click(function() {
 					octopus.setCurrentCat(cat);
 					catClickView.render();
 				});
-			});
+			}, this);
 		}
 	};
 
 	var catClickView = {
+		init: function() {
+			//Store the DOM elements in variables for later use
+			this.catName = $('#cat-name');
+			this.catImg = $('#cat-img');
+			this.catClicks = $('#cat-clicks');
+
+			// If a cat has been selected, render it (note that I haven't set a
+			// default so it remains empty until a cat is picked)
+			if (octopus.getCurrentCat()) {
+				this.render;
+			}
+
+			// Set the click event handler for the cat image
+			this.catImg.click(function() {
+				octopus.countClick();
+				catClickView.render();
+			});
+		},
 		render: function() {
 			var cat = octopus.getCurrentCat();
 
-			// Clear the existing clicker content and any event handler
-			$('#cat-clicker').empty();
-
-			// Now load up the selected cat
-			$('#cat-clicker').append(
-				'<h2>' + cat.name + '</h2>' +
-				'<img src="' + cat.img + '" alt="' + cat.name + '" id="cat">' +
-				'<p id="cat-clicks">Number of clicks: ' + cat.clicks + '</p>'
-			);
-
-			// Set the click event handler for the cat in the clicker section
-			$('#cat').click(function() {
-				octopus.countClick();
-			});
+			// Load up the selected cat's content
+			this.catName.text(cat.name);
+			this.catImg.attr('src', cat.img);
+			this.catClicks.text('Number of clicks: ' + cat.clicks);
 		}
 	};
 
