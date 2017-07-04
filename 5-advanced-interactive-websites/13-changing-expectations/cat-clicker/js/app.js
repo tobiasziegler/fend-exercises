@@ -34,5 +34,19 @@ $(document).ready(function(e) {
 
 		// Create the list item
 		$('#cat-list').append('<li id=' + i + '>' + cat.name + '</li>');
+
+		$('li#' + i).click(cat, (function(e) {
+			var cat = e.data;
+
+			// Clear the existing clicker content and any event handler
+			$('#cat-clicker').empty();
+
+			// Now load up the selected cat
+			$('#cat-clicker').append(
+				'<h2>' + cat.name + '</h2>' +
+				'<img src="' + cat.img + '" alt="' + cat.name + '" id="cat">' +
+				'<p>Number of clicks: ' + cat.clicks + '</p>'
+			);
+		}));
 	}
-})
+});
