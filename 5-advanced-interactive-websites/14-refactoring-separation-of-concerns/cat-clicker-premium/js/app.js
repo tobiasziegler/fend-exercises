@@ -42,6 +42,10 @@ $(function(){
 		},
 		setCurrentCat: function(cat) {
 			model.currentCat = cat;
+		},
+		countClick: function() {
+			model.currentCat.clicks++;
+			catClickView.render();
 		}
 	};
 
@@ -80,6 +84,11 @@ $(function(){
 				'<img src="' + cat.img + '" alt="' + cat.name + '" id="cat">' +
 				'<p id="cat-clicks">Number of clicks: ' + cat.clicks + '</p>'
 			);
+
+			// Set the click event handler for the cat in the clicker section
+			$('#cat').click(function() {
+				octopus.countClick();
+			});
 		}
 	};
 
