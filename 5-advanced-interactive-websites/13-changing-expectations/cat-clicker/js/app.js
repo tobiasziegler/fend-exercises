@@ -53,7 +53,7 @@ $(document).ready(function(e) {
 				// Update the counter and display the new count
 				cat.clicks++;
 				$('#cat-clicks').text('Number of clicks: ' + cat.clicks);
-			})
+			});
 		}));
 	}
 });
