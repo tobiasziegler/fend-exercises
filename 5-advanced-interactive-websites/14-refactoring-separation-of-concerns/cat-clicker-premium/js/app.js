@@ -36,6 +36,12 @@ $(function(){
 		},
 		getCats: function() {
 			return model.cats;
+		},
+		getCurrentCat: function() {
+			return model.currentCat;
+		},
+		setCurrentCat: function(cat) {
+			model.currentCat = cat;
 		}
 	};
 
@@ -51,12 +57,30 @@ $(function(){
 
 				// Add the item into the DOM
 				$('#cat-list').append(li);
+
+				// Set up the click event handler
+				$(li).click(function() {
+					octopus.setCurrentCat(cat);
+					catClickView.render();
+				});
 			});
 		}
 	};
 
 	var catClickView = {
+		render: function() {
+			var cat = octopus.getCurrentCat();
 
+			// Clear the existing clicker content and any event handler
+			$('#cat-clicker').empty();
+
+			// Now load up the selected cat
+			$('#cat-clicker').append(
+				'<h2>' + cat.name + '</h2>' +
+				'<img src="' + cat.img + '" alt="' + cat.name + '" id="cat">' +
+				'<p id="cat-clicks">Number of clicks: ' + cat.clicks + '</p>'
+			);
+		}
 	};
 
 	octopus.init();
