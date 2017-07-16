@@ -11,11 +11,24 @@ var Cat = function() {
 	]);
 
 	this.catLevel = ko.computed(function() {
-		if (this.clickCount() < 10) {
-			return 'Newborn';
+		var title;
+		var clicks = this.clickCount();
+
+		if (clicks < 10) {
+			title = 'Newborn';
+		} else if (clicks < 50){
+			title = 'Infant';
+		} else if (clicks < 100) {
+			title = 'Child';
+		} else if (clicks < 200) {
+			title = 'Teen';
+		} else if (clicks < 500) {
+			title = 'Adult';
 		} else {
-			return 'Infant';
+			title = 'Ninja';
 		}
+
+		return title;
 	}, this);
 };
 
