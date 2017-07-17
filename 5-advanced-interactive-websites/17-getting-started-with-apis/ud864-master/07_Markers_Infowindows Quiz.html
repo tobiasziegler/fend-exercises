@@ -10,6 +10,10 @@ API Course, Lesson 1 -->
  </head>
  <body>
    <div id="map"></div>
+
+   <!-- API keys should be stored in a JSON object named config defined in js/config.js -->
+   <script src='js/config.js'></script>
+
    <script type="text/javascript">
      // Create a map variable
      var map;
@@ -21,20 +25,40 @@ API Course, Lesson 1 -->
        });
        // Create a single latLng literal object.
        var singleLatLng = {lat: 40.74135, lng: -73.99802};
-       // TODO: Create a single marker appearing on initialize -
+
+       // Create a single marker appearing on initialize -
        // Create it with the position of the singleLatLng,
        // on the map, and give it your own title!
+       var marker = new google.maps.Marker({
+           position: singleLatLng,
+           map: map,
+           title: 'This is a single marker'
+       });
 
-       // TODO: create a single infowindow, with your own content.
+       // Create a single infowindow, with your own content.
        // It must appear on the marker
+       var infowindow = new google.maps.InfoWindow({
+          content: 'This is an infowindow'
+       });
 
-       // TODO: create an EVENT LISTENER so that the infowindow opens when
+       // Create an EVENT LISTENER so that the infowindow opens when
        // the marker is clicked!
+       marker.addListener('click', function() {
+           infowindow.open(map, marker);
+       });
      }
    </script>
    <!--TODO: Insert your API Key in the below call to load the API.-->
-   <script async defer
-     src="https://maps.googleapis.com/maps/api/js?v=3&key=XXX&callback=initMap">
+   <script>
+   function loadScript() {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://maps.googleapis.com/maps/api/js?v=3' +
+         '&key=' + config.GOOGLE_MAPS_KEY +'&callback=initMap'; //& needed
+      document.body.appendChild(script);
+   }
+
+   window.onload = loadScript;
    </script>
  </body>
 </html>
