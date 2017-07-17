@@ -87,6 +87,10 @@
       </div>
       <div id="map"></div>
     </div>
+
+    <!-- API keys should be stored in a JSON object named config defined in js/config.js -->
+    <script src='js/config.js'></script>
+
     <script>
       var map;
 
@@ -261,6 +265,9 @@
           // Make sure the search is re-done if the poly is changed.
           polygon.getPath().addListener('set_at', searchWithinPolygon);
           polygon.getPath().addListener('insert_at', searchWithinPolygon);
+          // Calculate and display the polygon area
+          var area = google.maps.geometry.spherical.computeArea(polygon.getPath());
+          window.alert(area + ' square metres');
         });
       }
 
@@ -369,9 +376,17 @@
       }
     </script>
 
-    <script async defer
-        src=
-        "https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=MYAPIKEY&v=3&callback=initMap">
+    <script>
+        function loadScript() {
+           var script = document.createElement('script');
+           script.type = 'text/javascript';
+           script.src = 'https://maps.googleapis.com/maps/api/js?v=3' +
+              '&key=' + config.GOOGLE_MAPS_KEY + '&libraries=geometry,drawing' +
+              '&callback=initMap'; //& needed
+           document.body.appendChild(script);
+        }
+
+        window.onload = loadScript;
     </script>
 
   </body>
